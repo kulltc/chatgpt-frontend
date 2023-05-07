@@ -1,38 +1,145 @@
-.App {
-  text-align: center;
+.app {
+  display: flex;
+  height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.nav {
+  width: 200px;
+  background-color: #f0f0f0;
+  padding: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.chat {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.chat-active {
+  background-color: #d0d0d0;
+}
+
+.main {
+  flex: 1;
+  padding: 20px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.message.user {
+  background-color: #dff0d8;
+  padding: 5px 10px;
+  margin-bottom: 5px;
+  display: inline-block;
+  border-radius: 5px;
+}
+
+.message.assistant {
+  background-color: #d9edf7;
+  padding: 5px 10px;
+  margin-bottom: 5px;
+  display: inline-block;
+  border-radius: 5px;
+}
+
+.message.system {
+  background-color: #ffd1dc;
+  padding: 5px 10px;
+  margin-bottom: 5px;
+  display: inline-block;
+  border-radius: 5px;
+}
+
+.input {
+  display: flex;
+  border-top: 1px solid #ccc;
+  padding: 10px;
+  align-self: stretch;
+}
+
+input {
+  flex: 1;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+textarea {
+  flex: 1;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px;
+  resize: none;
+  overflow: hidden;
+  font-family: inherit;
+}
+
+
+button {
+  margin-left: 10px;
+  border: none;
+  background-color: #007bff;
   color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.messages {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.message-icons {
+  float: right;
+  margin-left: 10px;
+}
+
+.message-icons span {
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.chat {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.chat-active {
+  background-color: #d0d0d0;
+}
+
+.copy-icon-container {
+  cursor: pointer;
+  position: relative;
+}
+
+.copy-tooltip {
+  position: absolute;
+  background-color: #000;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  bottom: 100%;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.add-message-btn {
+  background-color: #d0d0d0;
+  color:black
 }
